@@ -10,3 +10,23 @@ This tool is designed for teams and developers who write specs first—whether f
 - *Goal:* Reduce manual review, improve spec adherence, and streamline spec-first development
 
 CheckySpecky is easy to integrate with your CI/CD pipeline or use locally as a developer tool.
+
+## Usage
+*Note:* The API is still under design, please provide your feedback!
+
+``` python
+import checkyspecky
+
+# Initialize CheckySpecky with your project directory and spec files
+checker = checkyspecky.Checker(project_dir="path/to/your/code", spec_files=["specs/**.md", "docs/constitution.md"])
+
+# Run the check
+report = checker.run()
+
+# Print the report
+report.print_summary()
+
+```
+
+# Contributing
+Contributions are welcome! Please open issues for bugs or feature requests, and submit pull requests for improvements.
